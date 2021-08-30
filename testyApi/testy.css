@@ -15,6 +15,7 @@ h1 {
     margin: 0 auto;
     max-width: 1000px;
     text-align: center;
+    color: white;
 }
 
 #jobsList {
@@ -24,7 +25,7 @@ h1 {
     grid-gap: 20px;
 }
 
-.job {
+/* .job {
     list-style-type: none;
     background-color: #eaeaea;
     border-radius: 3px;
@@ -35,23 +36,21 @@ h1 {
         'name image'
         'house image';
     text-align: left;
-}
+} */
 
-.job > h2 {
-    grid-area: name;
+/* .job > h2 {
+    
     margin-bottom: 50px;
 }
 
 .job > p {
-    grid-area: house;
-    margin: 0;
-    margin-top: -18px;
-}
+    
+    
+   
+    margin-bottom: 50px;
+} */
 
-.job > img {
-    max-height: 100px;
-    grid-area: image;
-}
+
 
 #searchBar {
     width: 100%;

@@ -18,10 +18,12 @@ console.log(newJobs);
 
 const displayJobs = (jobs) => {
     const htmlString = [jobs]
-        .map((newJobs) => {
+    .map((newJobs) => {
             return `
             <li class="job">
                 <h2>${newJobs.results[0].title}</h2>
+                <h3>${newJobs.results[0].company.display_name}</h3>
+                <h4>${newJobs.results[0].location.display_name}</h4>
                 <p>${newJobs.results[0].description}</p>
                 
                 

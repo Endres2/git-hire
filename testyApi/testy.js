@@ -9,29 +9,58 @@ const loadJobs = async () => {
 
 newJobs = await res.json();
 console.log(newJobs);
-        displayJobs(newJobs);
+let array = newJobs.results;
+for (let i = 0; i < array.length; i++) {
+    // console.log(array[i]);
+    displayJobs(array[i]);
+}
+    
+// for (let a of array) {
+//     console.log(a);
+//     displayJobs(a);
+// }
+
+
+
+// displayJobs(a);
     } catch (err) {
                 console.error(err);
             }
         };
 
 
-const displayJobs = (jobs) => {
-    const htmlString = [jobs]
+        
+const displayJobs = (newJobs) => {
+    // console.log(newJobs)
+    
+    const htmlString = [[newJobs]
+    
     .map((newJobs) => {
-            return `
+        // for ( var i = 0, l = newJobs.results; i < l; i++ ){
+             return `
             <li class="job">
-                <h2>${newJobs.results[0].title}</h2>
-                <h3>${newJobs.results[0].company.display_name}</h3>
-                <h4>${newJobs.results[0].location.display_name}</h4>
-                <p>${newJobs.results[0].description}</p>
+                <h2>${newJobs.title}</h2>
+                <h3>${newJobs.company.display_name}</h3>
+                <h4>${newJobs.location.display_name}</h4>
+                <p>${newJobs.description}</p>
                 
                 
                 
             </li>
         `;
-        })
-        .join('');
-    jobsList.innerHTML = htmlString;
+        
+    })
+    
+        .join('')];
+        
+  jobsList.innerHTML = htmlString;
+  
+  console.log(newJobs);
+  
+  
+ 
+    
+    
 };
 loadJobs();
+

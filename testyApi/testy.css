@@ -16,6 +16,7 @@ h1 {
     max-width: 1000px;
     text-align: center;
     color: white;
+    
 }
 
 #jobsList {
@@ -25,30 +26,7 @@ h1 {
     grid-gap: 20px;
 }
 
-/* .job {
-    list-style-type: none;
-    background-color: #eaeaea;
-    border-radius: 3px;
-    padding: 10px 20px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-        'name image'
-        'house image';
-    text-align: left;
-} */
 
-/* .job > h2 {
-    
-    margin-bottom: 50px;
-}
-
-.job > p {
-    
-    
-   
-    margin-bottom: 50px;
-} */
 
 
 

@@ -50,19 +50,31 @@ function searchValue(event) {
     cityTitle.text(searchedCity);
     cityTitle.appendTo(cityHead);
 
-    var searchedKeys = document.querySelector("#keywords-value").value;
+    let searchedKeys = document.querySelector("#keywords-value").value;
     console.log(searchedKeys);
+
+    const keysArr = searchedKeys.split(" ");
+
+    for (let i = 0; i < keysArr.length; i++) {
+       
+        let keyWords = keysArr[i] + "%20";
+        console.log(keyWords);
+   
+    
+
 
     var searchedSalary = document.querySelector("#salary-value").value;
     console.log(searchedSalary);
 
-    loadJobs(searchedCity, searchedSalary);
-}
+    loadJobs(searchedCity, searchedSalary, keyWords);
+}}
 
-const loadJobs = async (searchedCity, searchedSalary) => {
+const loadJobs = async (searchedCity, searchedSalary, keyWords) => {
 
-      var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&where=" + searchedCity + "&salary_min=" + searchedSalary;
-    //   var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&what_or=full%20stack%20jack&where=" + searchedCity + "&salary_min=" + searchedSalary;
+  
+
+    //   var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&where=" + searchedCity + "&salary_min=" + searchedSalary;
+      var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&what_or=" + keyWords + "&where=" + searchedCity + "&salary_min=" + searchedSalary;
     // var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10";
 
 

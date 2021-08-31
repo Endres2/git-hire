@@ -16,7 +16,8 @@
   </a>	
 </p>
 
-![logo](https://user-images.githubusercontent.com/85579055/131238400-84159afa-28b2-49c1-b76e-bccd708922ae.png)
+![logov2](https://user-images.githubusercontent.com/85579055/131559107-f5c1799a-1f36-4923-8d96-8342353e1dd9.png)
+
 
 
   <h3 align="center"> Git Hire</h3>

@@ -15,7 +15,7 @@ function Navbar() {
     const closeMobileMenu = () => setClick(false);
     //do not show button if screen is less than 960
     const showButton = () => {
-        if(window.innderWidth <= 960) {
+        if(window.innerWidth <= 960) {
             setButton(false);
         }else {
             setButton(true);

@@ -7,7 +7,9 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <h1>Yo</h1>
+      <header className='App-header'>
+        <h1>Yo</h1>
+      </header>     
     </div>
     // <>
     //   <Router>

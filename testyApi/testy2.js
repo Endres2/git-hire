@@ -27,12 +27,16 @@ function printResults(newJobs) {
     var locationContentEl = document.createElement('p');
     locationContentEl.innerHTML =
         '<strong>Location: </strong> ' + newJobs.location.display_name + '<br/>';
+        
+    var linkEl = document.createElement('p');
+    linkEl.innerHTML =
+        '<strong>External Link: </strong> ' + newJobs.redirect_url + '<br/>';
 
     var descriptionEl = document.createElement('p');
     descriptionEl.innerHTML =
         '<strong>Description: </strong> ' + newJobs.description + '<br/>';
 
-    resultBody.append(titleContentEl, companyContentEl, locationContentEl, descriptionEl);
+    resultBody.append(titleContentEl, companyContentEl, locationContentEl, linkEl, descriptionEl);
 
     resultContentEl.append(resultCard);
 }

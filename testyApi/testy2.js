@@ -53,17 +53,17 @@ function searchValue(event) {
     loadJobs(searchedCity);
 }
 
-const loadJobs = async (newJobs) => {
+const loadJobs = async (searchedCity) => {
 
-    //   var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&location0=" + searchedCity;
-    var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10";
+      var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&where=" + searchedCity;
+    // var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10";
 
 
     try {
         const res = await fetch(queryUrl)
 
         jobs = await res.json();
-        console.log(newJobs);
+        console.log(jobs);
         let array = jobs.results;
         for (let i = 0; i < array.length; i++) {
 
@@ -76,3 +76,7 @@ const loadJobs = async (newJobs) => {
 
 searchBtn.addEventListener("click", searchValue);
 // cityBtn.addEventListener("click", searchValue);
+
+
+
+

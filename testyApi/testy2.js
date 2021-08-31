@@ -27,12 +27,16 @@ function printResults(newJobs) {
     var locationContentEl = document.createElement('p');
     locationContentEl.innerHTML =
         '<strong>Location: </strong> ' + newJobs.location.display_name + '<br/>';
+        
+    var linkEl = document.createElement('p');
+    linkEl.innerHTML =
+        '<strong>External Link: </strong> ' + newJobs.redirect_url + '<br/>';
 
     var descriptionEl = document.createElement('p');
     descriptionEl.innerHTML =
         '<strong>Description: </strong> ' + newJobs.description + '<br/>';
 
-    resultBody.append(titleContentEl, companyContentEl, locationContentEl, descriptionEl);
+    resultBody.append(titleContentEl, companyContentEl, locationContentEl, linkEl, descriptionEl);
 
     resultContentEl.append(resultCard);
 }
@@ -50,12 +54,31 @@ function searchValue(event) {
     cityTitle.text(searchedCity);
     cityTitle.appendTo(cityHead);
 
-    loadJobs(searchedCity);
-}
+    let searchedKeys = document.querySelector("#keywords-value").value;
+    console.log(searchedKeys);
 
-const loadJobs = async (searchedCity) => {
+    const keysArr = searchedKeys.split(" ");
 
-      var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&where=" + searchedCity;
+    for (let i = 0; i < keysArr.length; i++) {
+       
+        let keyWords = keysArr[i] + "%20";
+        console.log(keyWords);
+   
+    
+
+
+    var searchedSalary = document.querySelector("#salary-value").value;
+    console.log(searchedSalary);
+
+    loadJobs(searchedCity, searchedSalary, keyWords);
+}}
+
+const loadJobs = async (searchedCity, searchedSalary, keyWords) => {
+
+  
+
+    //   var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&where=" + searchedCity + "&salary_min=" + searchedSalary;
+      var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10&what_or=" + keyWords + "&where=" + searchedCity + "&salary_min=" + searchedSalary;
     // var queryUrl = "https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=6d54e703&app_key=69dedd20d9b94d1778be8e912ab12484&results_per_page=10";
 
 

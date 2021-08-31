@@ -2,19 +2,19 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const orderSchema = new Schema({
-  purchaseDate: {
+const jobsSchema = new Schema({
+  addedDate: {
     type: Date,
     default: Date.now
   },
-  products: [
+  jobs: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Product'
+      ref: 'Job'
     }
   ]
 });
 
-const Order = mongoose.model('Order', orderSchema);
+const Jobs = mongoose.model('Jobs', jobsSchema);
 
-module.exports = Order;
+module.exports = Jobs;

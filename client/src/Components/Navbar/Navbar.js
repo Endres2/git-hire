@@ -1,8 +1,9 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import LOGO from '../../images/logov2-removebg.png';
 import React, {useState, useEffect} from 'react';
-import { Button } from './Button';
+import { Button } from '../Button/Button'
 
 function Navbar() {
 
@@ -35,7 +36,7 @@ function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        Git Hire 
+                        <img className='logo' src={LOGO} alt='' />
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -47,17 +48,17 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/comments' className='nav-links' onClick={closeMobileMenu}>
                                 Comments
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/contact' className='nav-links-mobile' onClick={closeMobileMenu}>
+                            <Link to='/signup' className='nav-links-mobile' onClick={closeMobileMenu}>
                                 Sign Up/Login 
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Sign Up </Button>}
+                    {button && <Button buttonStyle='btn--outline'>Sign Up/ Login </Button>}
                 </div>
             </nav>
         

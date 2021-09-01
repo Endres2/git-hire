@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import LOGO from '../../images/logov2-removebg.png';
 import React, {useState, useEffect} from 'react';
 import { Button } from '../Button/Button'
 
@@ -35,7 +36,7 @@ function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        <img src={require('../../images/logov2.png')} alt='Git Hire'/> 
+                        <img className='logo' src={LOGO} alt='' />
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

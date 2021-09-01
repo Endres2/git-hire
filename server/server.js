@@ -1,38 +1,34 @@
-const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-
-const { typeDefs, resolvers } = require('./schemas');
-const { authMiddleware } = require('./utils/auth');
-const db = require('./config/connection');
-
-const PORT = process.env.PORT || 3001;
+const axios = require('axios');
+const cors = require('cors');
+const express = require('express');
 const app = express();
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware
+
+const PORT = process.env.PORT || 5000;
+
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
+app.use(cors());
+
+app.get('/jobs', async (req, res) => {
+  try {
+    let { description = '', full_time, location = '', page = 1 } = req.query;
+
+    description = description ? encodeURIComponent(description) : '';
+    location = location ? encodeURIComponent(location) : '';
+    full_time = full_time === 'true' ? '&full_time=true' : '';
+    if (page) {
+      page = parseInt(page);
+      page = isNaN(page) ? '' : `&page=${page}`;
+    }
+    const query = `https://jobs.github.com/positions.json?description=${description}&location=${location}${full_time}${page}`;
+    const result = await axios.get(query);
+    res.send(result.data);
+  } catch (error) {
+    res.status(400).send('Error while getting list of jobs.Try again later.');
+  }
 });
 
-server.applyMiddleware({ app });
-
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
-// Serve up static assets
-app.use('/images', express.static(path.join(__dirname, '../client/images')));
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/public')));
-}
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/public/index.html'));
-});
-
-db.once('open', () => {
-  app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`);
-    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-  });
+app.listen(PORT, (req, res) => {
+  console.log(`server started on port ${PORT}`);
 });

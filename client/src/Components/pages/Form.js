@@ -1,27 +1,40 @@
-import React, { useState } from 'react';
-import FormSignup from './FormSignup';
-import FormSuccess from './FormSuccess.js';
+import React from 'react';
 import '../../App.css';
-import signupImg from '../../images/signup-img.jpg'
+import './Form.css';
+
 
 function Form() {
-    const [isSubmitted, setIsSubmitted] = useState(false);;
-
-    function submitForm() {
-        setIsSubmitted(true);
-    }
 
     return (
-        <>
-        <div className='form-container'>
-            <span className='close-btn'>X</span>
-            <div className='form-content-left'>
-                <img src={signupImg} alt='' className='form-img'/>
+        <div className='Form form-container'>
+            <div className='signup'>
+                <h1>Sign up</h1>
+                <div className='form-input'>
+                    <label htmlFor='name' className='form-label'>Full Name:</label>
+                    <input type='text' name='name' placeholder='Enter full name'/>
+                </div>
+                <div className='form-input'>
+                    <label htmlFor='email' className='form-label'>Email:</label>
+                    <input type='email' name='email' placeholder='Enter your email'/>
+                </div>
+                <div className='form-input'>
+                    <label htmlFor='password' className='form-label'>Password:</label>
+                    <input type='password' name='password' placeholder='Enter A Password'/>
+                </div>           
             </div>
-            {/* if the form is not submitted then display formsignup else formlogin */}
-           {!isSubmitted ? (<FormSignup submitForm={submitForm} />) : (<FormSuccess />)}
+            <div className='login'>
+                <h1>Login</h1>
+                <div className='form-input'>
+                    <label htmlFor='email' className='form-label'>Email:</label>
+                    <input type='email' name='email' placeholder='Enter your email'/>
+                </div>
+                <div className='form-input'>
+                    <label htmlFor='password' className='form-label'>Password:</label>
+                    <input type='password' name='password' placeholder='Enter your Password'/>
+                </div>
+            </div>
+            
         </div>
-        </>
     )
 }
 

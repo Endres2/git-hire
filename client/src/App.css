@@ -6,8 +6,9 @@
 }
 
 
-.comments,
+/* .comments, */
 .Form,
+.JobSearch,
 .UserProfile {
   display: flex;
   height: 90vh;

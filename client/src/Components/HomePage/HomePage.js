@@ -32,7 +32,11 @@ function HomePage() {
               </p>
             </div>
             <div class="six wide right floated column">
+<<<<<<< HEAD
               <img class="ui fluid image" src="./business-people-group.jpeg" />
+=======
+              <img class="ui fluid image" src="../../images/business-people-group.jpeg"/>
+>>>>>>> 875616331b4268ee6010debcbe7f3c9e427fbce0
             </div>
           </div>
           <div class="row">

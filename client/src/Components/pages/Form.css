@@ -1,0 +1,25 @@
+.form-container {
+    background: #161747;
+    color: #E5E8ED;
+    display: flex;
+    padding: 20px;
+    height: 70vh;
+    border-radius: 18px;
+    align-items: center;
+}
+
+.signup {
+    margin: 15px;
+    height: 100%;
+}
+
+.login {
+    margin: 15px;
+    height: 100%;
+}
+
+.form-btn {
+    padding: 8px;
+    width: 100px;
+    font-size: 15px;
+}

@@ -17,12 +17,16 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+
     "bootstrap": "^5.1.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-calendar": "^3.4.0",
     "react-redux": "^7.2.4",
     "uuidv4": "^6.2.12",
+
+    "react-router-dom": "^5.2.1",
+
     "yarn": "^1.22.11"
   }
 }

@@ -24,7 +24,7 @@ function About() {
               <p> We have taken time to create a simple and easy way to search and apply for jobs. </p>
             </div>
             <div class="six wide right floated column">
-              <img class="ui fluid image" src="./business-people-group.jpeg"/>
+              <img class="ui fluid image" src="../../images/business-people-group.jpeg"/>
             </div>
           </div>
           <div class="row">

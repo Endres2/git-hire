@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomePage.css";
 import "../../App.css";
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
@@ -9,8 +10,9 @@ function HomePage() {
         <div class="ui text container">
           <h1 class="ui inverted header">Git Hire</h1>
           <h2>Lets Git You Working!</h2>
-          <div class="ui huge primary button">
-            View our Jobs <i class="globe icon"></i>
+          <div class="ui huge primary button ">
+            <Link to='/JobSearch' className='view-jobs'>View our Jobs <i class="globe icon"></i>
+            </Link>
           </div>
         </div>
       </div>
@@ -38,7 +40,8 @@ function HomePage() {
           <div class="row">
             <div class="center aligned column">
               <a class="ui huge button">
-                Git Started<i class="chevron circle right icon"></i>
+                <Link to='/Form' className='git-started'>Git Started<i class="chevron circle right icon"></i>
+                </Link>
               </a>
             </div>
           </div>

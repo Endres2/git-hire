@@ -55,23 +55,33 @@
 
 **The Solution:** Our app identifies jobs that are made for YOU! We want to help you find the RIGHT job and get you into the workforce. Looking for jobs can be overwhelming, confusing, and frustrating. Git Hire aims to simplify the job search for our users to reduce the stress of finding a job. 
 
-Deployed app:
+**Git You  Hired:** Allow users a quick and easy job search experience to help them with their job search
+
+**Keep You On Track:** Allow users to track and manage their previous job applications
+
 
 
 
 ### Built With
 
 * [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-* [bcrypt](https://www.npmjs.com/package/bcryptjs)
-* [express](https://expressjs.com)
-* [express-session](https://www.npmjs.com/package/express-session)
-* [mysql2](https://www.npmjs.com/package/mysql2)
-* [sequelize](https://www.npmjs.com/package/sequelize)
+* [React](https://reactjs.org/)
+* [Bcrypt](https://www.npmjs.com/package/bcryptjs)
+* [MongoDB](https://www.mongodb.com/)
+* [React-Bootstrap](https://www.npmjs.com/package/react-bootstrap)
+* [React-Calendar](https://www.npmjs.com/package/react-calendar)
+* [React-Redux](https://react-redux.js.org/)
+* [React-Router-dom](https://www.npmjs.com/package/react-router-dom)
+* [uuidv4](https://www.npmjs.com/package/uuidv4)
+* [Semantic-Ui-React](https://www.npmjs.com/package/semantic-ui-react)
+* [Node](https://nodejs.org/en/)
+* [Yarn](https://yarnpkg.com/)
 
 
 
 
 ## Usage
+
 In the project directory, you can run:
 
 ### `yarn start`

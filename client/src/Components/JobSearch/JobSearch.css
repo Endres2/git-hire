@@ -1,0 +1,39 @@
+.search-container {
+  display: flex;
+  padding: 10px;
+  margin: 20px;
+}
+
+.where {
+    margin-left: 15px;
+}
+
+.find-jobs-btn {
+    margin-left: 20px;
+}
+
+.btn-jobs {
+    background: yellow;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3),
+.input-group:not(.has-validation)
+> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    color: white;
+    background: #161747;
+}
+
+

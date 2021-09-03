@@ -11,7 +11,56 @@ function Form() {
 
     return (
         <div className='Form'>
-            <div className='form-container'>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Sign Up</h1>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Full Name:</span>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder='Enter your full name' onChange={(e) => {
+                                    setFullNameReg(e.target.value);
+                                }}/>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Email:</span>
+                                <input type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder='Enter your email' onChange={(e) => {
+                                    setEmailReg(e.target.value);
+                                }}/>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Password:</span>
+                                <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder='Enter a password' onChange={(e) => {
+                                    setPasswordReg(e.target.value);
+                                }}/>
+                            </div>
+                            <div className='form-btn'>
+                                <a href="#" class="btn btn-primary">Sign up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Login</h1>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Email:</span>
+                                <input type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder='Enter your email'/>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Password:</span>
+                                <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder='Enter your password'/>
+                            </div>
+                            <div className='form-btn'>
+                                <a href="#" class="btn btn-primary">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className='form-container'>
                 <div className='signup'>
                     <h1>Sign up</h1>
                     <div className='form-input'>
@@ -46,7 +95,7 @@ function Form() {
                     </div>
                     <button className='form-btn'>Login</button>
                 </div>
-            </div>
+            </div> */}
             
         </div>
     )

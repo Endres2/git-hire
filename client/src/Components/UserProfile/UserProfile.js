@@ -1,7 +1,9 @@
+import React from 'react';
 import './UserProfile.css';
 import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar'
 import JobList from './JobList';
+import '../../App.css';
 
 function UserProfile() {
 

@@ -7,6 +7,18 @@ body {
   display: none;
 }
 
+.view-jobs {
+  color: whitesmoke;
+}
+
+.jobs-btn {
+  
+}
+
+.git-started {
+  color: whitesmoke;
+}
+
 header {
   height: 75px;
   background-color: rgb(34, 33, 32);

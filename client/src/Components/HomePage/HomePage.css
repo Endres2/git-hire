@@ -1,0 +1,126 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+}
+
+.hidden.menu {
+  display: none;
+}
+
+header {
+  height: 75px;
+  background-color: rgb(34, 33, 32);
+  color: rgb(229, 232, 237);
+}
+.masthead.segment {
+  min-height: 600px;
+  padding: 1em 0em;
+}
+
+.masthead {
+  background-image: url("../../images/homepage.jpg") !important;
+  background-size: cover !important;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+
+.masthead h1.ui.header {
+  margin-top: 2.5em;
+  margin-bottom: 0em;
+  font-size: 6.3em;
+  font-weight: normal;
+  color: rgb(253, 220, 1);
+}
+
+.masthead h2 {
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+  font-weight: normal;
+  color: rgb(41, 124, 166);
+}
+
+.masthead .ui.huge.primary.button {
+  background-color: rgb(41, 124, 166);
+  font-size: 1.5em;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+
+.ui.vertical.stripe h3 {
+  font-size: 2.5em;
+}
+
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+
+.ui.vertical.stripe .ui.huge.button {
+  font-size: 2em;
+  background-color: rgb(41, 124, 166);
+}
+
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+}
+
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.footer.segment {
+  padding: 5em 0em;
+}
+
+.secondary.pointing.menu .toc.item {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+
+  .masthead.segment {
+    min-height: 350px;
+  }
+
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+}

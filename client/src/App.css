@@ -1,6 +1,17 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "PT Sans", sans-serif;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+}
+
+
+/* .comments, */
+.Form,
+.JobSearch,
+.UserProfile {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}

@@ -19,6 +19,7 @@ function JobSearch() {
                     <button type='button' className='btn btn-jobs'>Find Jobs</button> 
                 </div>
            </div>
+           <div className='jobs'
         </div>
     )
 }

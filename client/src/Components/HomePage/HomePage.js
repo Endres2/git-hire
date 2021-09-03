@@ -34,7 +34,7 @@ function HomePage() {
               </p>
             </div>
             <div class="six wide right floated column">
-              <img class="ui fluid image" src="./business-people-group.jpeg" />
+              <img class="ui fluid image" src="../../images/business-people-group.jpeg" />
             </div>
           </div>
           <div class="row">

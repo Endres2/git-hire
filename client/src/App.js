@@ -20,6 +20,7 @@ function App() {
           <Route path='/' exact component={HomePage}/>
           <Route path='/UserProfile' component={UserProfile}/>
           <Route path='/Form' component={Form} />
+
           <Route path='/JobSearch' component={JobSearch}/>
         </Switch>
       </Router>
